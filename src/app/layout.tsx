@@ -25,9 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-              {/* Favicon */}
-              <link rel="icon" type="image/png" href="/bv-logo.png" />
-            </head>
+        {/* Favicon */}
+        <link rel="icon" type="image/png" href="/bv-logo.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

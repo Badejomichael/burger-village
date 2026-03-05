@@ -3,7 +3,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+import { useRouter } from "next/navigation";
+
+
 export default function SplashScreen() {
+  const router = useRouter();
   const [showIntro, setShowIntro] = useState(true);
 
   // Auto transition after 3 seconds
@@ -59,7 +63,10 @@ export default function SplashScreen() {
             down to your doorstep.
           </p>
 
-          <button className="bg-gray-200 text-black font-medium px-10 py-3 rounded-full text-base sm:text-lg hover:scale-105 transition-transform duration-300">
+          <button
+            onClick={() => router.push("/onboarding")}
+            className="bg-gray-200 text-black px-10 py-3 rounded-full"
+          >
             Get Started
           </button>
         </div>
